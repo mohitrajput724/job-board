@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Job Board</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <h1>Job Board</h1>
+  <a href="/new">+ Post a Job</a>
+  <ul>
+    <% jobs.forEach(job => { %>
+      <li>
+        <a href="/jobs/<%= job.id %>"><%= job.title %></a>
+        — <%= job.company %> · <%= job.location %>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
